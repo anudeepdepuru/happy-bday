@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthday</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body{
+      height:100vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fbc2eb);
+      overflow:hidden;
+    }
+
+    .container{
+      text-align:center;
+      background:white;
+      padding:40px;
+      border-radius:20px;
+      box-shadow:0 10px 30px rgba(0,0,0,0.2);
+      animation: float 3s ease-in-out infinite;
+      max-width:500px;
+    }
+
+    h1{
+      font-size:3rem;
+      color:#ff4081;
+      margin-bottom:20px;
+    }
+
+    p{
+      font-size:1.2rem;
+      color:#444;
+      line-height:1.6;
+      margin-bottom:20px;
+    }
+
+    .cake{
+      font-size:80px;
+      animation: bounce 1.5s infinite;
+    }
+
+    .btn{
+      display:inline-block;
+      margin-top:20px;
+      padding:12px 25px;
+      background:#ff4081;
+      color:white;
+      text-decoration:none;
+      border-radius:30px;
+      transition:0.3s;
+      font-size:1rem;
+    }
+
+    .btn:hover{
+      background:#e91e63;
+      transform:scale(1.05);
+    }
+
+    @keyframes bounce{
+      0%,100%{
+        transform:translateY(0);
+      }
+      50%{
+        transform:translateY(-15px);
+      }
+    }
+
+    @keyframes float{
+      0%,100%{
+        transform:translateY(0);
+      }
+      50%{
+        transform:translateY(-10px);
+      }
+    }
+
+    /* Floating balloons */
+    .balloon{
+      position:absolute;
+      bottom:-150px;
+      width:60px;
+      height:80px;
+      border-radius:50%;
+      animation: rise 10s infinite ease-in;
+    }
+
+    .balloon:before{
+      content:"";
+      position:absolute;
+      width:2px;
+      height:80px;
+      background:#555;
+      left:50%;
+      top:80px;
+    }
+
+    .balloon1{
+      background:#ff4d4d;
+      left:10%;
+      animation-duration:8s;
+    }
+
+    .balloon2{
+      background:#4da6ff;
+      left:30%;
+      animation-duration:10s;
+    }
+
+    .balloon3{
+      background:#ffd24d;
+      left:50%;
+      animation-duration:7s;
+    }
+
+    .balloon4{
+      background:#66ff99;
+      left:70%;
+      animation-duration:9s;
+    }
+
+    .balloon5{
+      background:#d966ff;
+      left:90%;
+      animation-duration:11s;
+    }
+
+    @keyframes rise{
+      0%{
+        transform:translateY(0);
+        opacity:1;
+      }
+      100%{
+        transform:translateY(-120vh);
+        opacity:0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Balloons -->
+  <div class="balloon balloon1"></div>
+  <div class="balloon balloon2"></div>
+  <div class="balloon balloon3"></div>
+  <div class="balloon balloon4"></div>
+  <div class="balloon balloon5"></div>
+
+  <!-- Main Card -->
+  <div class="container">
+    <div class="cake">🎂</div>
+    <h1>Happy Birthday!</h1>
+
+    <p>
+      Wishing you a day filled with happiness, joy,
+      laughter, and lots of wonderful memories.
+      May all your dreams come true!
+    </p>
+
+    <a href="#" class="btn">Celebrate 🎉</a>
+  </div>
+
+</body>
+</html>
